@@ -1,0 +1,19 @@
+{
+   "browser_action": {
+      "default_icon": "icon.png"
+   },
+   "content_scripts": [ {
+      "js": ["jquery.js",  "content.js"],
+      "matches": ["http://*/*", "https://*/*" ]
+   } ],
+   "description": "Transforms all share buttons in the photo-viewer to Share intents!",
+   "icons": {
+      "128": "icon-big.png",
+      "16": "icon.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC/kYjywxqt5qVkDDYVCAFIcQZWYlz4vfxQs2UV62cS9cMYv0P344HvyWIYGcJ4ZXvuOb4oa/EJ7L+xfa+CBNMFbwuCtSj62ia7uIkOcknSeDiP6613ZwOXD6Hhu+y+6DCR6LABWTI6H2635NMD7YTq+C4xHDdGBoNW1kaCs2DaewIDAQAB",
+   "name": "Intentify-Fb",
+   "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}

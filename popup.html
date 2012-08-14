@@ -1,0 +1,48 @@
+<html>
+<script>
+
+chrome.tabs.executeScript(null, {file: "content.js"});
+chrome.tabs.executeScript(null, {code:"javascript:likeAll(likes)"});
+
+function likeItAll(){
+	chrome.tabs.executeScript(null, {file: "content.js"});
+    chrome.tabs.executeScript(null, {code:"javascript:likeAll(likes)"});
+	onLoad = null;
+}
+
+	
+</script>
+<style>
+body {
+  min-width:357px;
+  overflow-x:hidden;
+  background-color:#FCF8BC;
+}
+#likeTally{
+	font-family:Georgia, Helvetica, Arial;
+	line-height:24px;
+	color:#2B2825;
+}
+a{
+	color:#D6156C;
+}
+a:hover{
+	background-color:#2B2825;
+}
+</style>
+
+<body id="popup" onLoad="javascript:likeItAll().onload = null;">
+	<div id="likeTally">
+		<p>
+			Now liking all "likes" on the page. Enjoy! <br />
+			You should follow me on <a href="javascript:linkTo()">Twitter</a>
+			
+		</p>
+	</div>
+</body>
+<script type="text/javascript" charset="utf-8">
+	function linkTo(){
+		chrome.tabs.create({url:"http://twitter.com/danest"});
+	}
+</script>
+</html>
